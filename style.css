@@ -1,3 +1,7 @@
+body {
+	text-align: center;
+}
+
 .img-circle {
 	margin: auto;
 	margin-bottom: 30px;
@@ -19,10 +23,9 @@ h1 {
 	letter-spacing: 2px;
 }
 
-#plebian {
+#footer {
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background-color: #ff6666;
 	font-size: 24px;
 	bottom: 0;
 	width: 100%;
