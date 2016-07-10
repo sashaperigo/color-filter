@@ -10,11 +10,10 @@
 
     	<title>Synth Color Filter</title>
     	<meta name="description" content="Color Picker" />
-    	<meta name="viewport" content="width= device width, initial-scale=1">
+    	<meta name="viewport">
 
         <!--Styles-->
     	<link rel="stylesheet" type="text/css" href="style.css">
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
 
     <body>
@@ -24,19 +23,30 @@
               or <a href="http://www.google.com/chromeframe/?redirect=true">activate 
               Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-    	<div class="container-fluid"></div>
-    	<h1 id="header">Synth Color Filter</h1>
+        <!--GitHub ribbon-->
+        <a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+    	<h1>SYNTH COLOR FILTER</h1>
+        <p>
+            The synth color filter is an experiment in subtractive synthesis built at 
+            the 7/9 <a href="http://monthlymusichackathon.org/">NYC Monthly Music Hackathon</a>. 
+            Press play and mouse over the color wheel to get started. When you select a color 
+            a filter is applied to the soundwave that only lets the frequencies used to generate 
+            the selected color soon. The filter is most intense towards the edge of the circle, 
+            and least intense at the very center.
+        </p>
         <canvas id="canvas"></canvas>
         <div id="toolbar">
             <input id="clickMe" type="button" style="font-size: 24px;" value="Play/Stop" onclick="trigger();" />
         </div>
-        <div id="footer">Made with ♥ at the NYC Monthly Music Hackathon.</div>
+        <p>
+            Made with <font face="Arial">♥</font> by 
+            <a href="https://github.com/sashaperigo">Sasha Perigo</a>, 
+            <a href="https://github.com/jameswenzel">James Wenzel</a>, 
+            and <a href="http://www.dakotalillie.com/">Dakota Lillie</a>.
+        </p>
 
         <!--SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS!-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"></script>
         <script src="tones.js"></script>
         <script src="main.js"></script>
