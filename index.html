@@ -2,53 +2,63 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-    <head>
-    	<meta charset="utf-8" />
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Synth Color Filter</title>
+    <meta name="description" content="Color Picker" />
+    <meta name="viewport">
+    
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-67691323-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</head>
 
-    	<title>Synth Color Filter</title>
-    	<meta name="description" content="Color Picker" />
-    	<meta name="viewport">
-
-        <!--Styles-->
-    	<link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-
-    <body>
-    	<!--[if lt IE 7]>
+<body>
+    <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> 
               browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> 
               or <a href="http://www.google.com/chromeframe/?redirect=true">activate 
               Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <!--GitHub ribbon-->
-        <a href="https://github.com/sashaperigo/color-filter"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
-    	<h1>SYNTH COLOR FILTER</h1>
-        <p>
-            The synth color filter is an experiment in subtractive synthesis built at 
-            the 7/9 <a href="http://monthlymusichackathon.org/">NYC Monthly Music Hackathon</a>. 
-            Press play and mouse over the color wheel to get started. When you select a color 
-            a filter is applied to the soundwave that only lets the frequencies used to generate 
-            the selected color soon. The filter is most intense towards the edge of the circle, 
-            and least intense at the very center.
-        </p>
-        <canvas id="canvas"></canvas>
-        <div id="toolbar">
-            <input id="clickMe" type="button" style="font-size: 24px;" value="Play/Stop" onclick="trigger();" />
-        </div>
-        <p>
-            Made with <font face="Arial">♥</font> by 
-            <a href="https://github.com/sashaperigo">Sasha Perigo</a>, 
-            <a href="https://github.com/jameswenzel">James Wenzel</a>, 
-            and <a href="http://www.dakotalillie.com/">Dakota Lillie</a>.
-        </p>
+    <!--GitHub ribbon-->
+    <a href="https://github.com/sashaperigo/color-filter"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+    <h1>SYNTH COLOR FILTER</h1>
+    <p>
+        The synth color filter is an experiment in subtractive synthesis built at the 7/9 <a href="http://monthlymusichackathon.org/">NYC Monthly Music Hackathon</a>. Press play and mouse over the color wheel to get started. When you select a color a filter is applied to the soundwave that only lets the frequencies used to generate the selected color soon. The filter is most intense towards the edge of the circle, and least intense at the very center.
+    </p>
+    <canvas id="canvas"></canvas>
+    <div id="toolbar">
+        <input id="clickMe" type="button" style="font-size: 24px;" value="Play/Stop" onclick="trigger();" />
+    </div>
+    <p>
+        Made with
+        <font face="Arial">♥</font> by
+        <a href="https://github.com/sashaperigo">Sasha Perigo</a>,
+        <a href="https://github.com/jameswenzel">James Wenzel</a>, and <a href="http://www.dakotalillie.com/">Dakota Lillie</a>.
+    </p>
+    <!--SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS!-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"></script>
+    <script src="tones.js"></script>
+    <script src="main.js"></script>
+</body>
 
-        <!--SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS!-->
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script type="text/javascript" src="https://tonejs.github.io/CDN/latest/Tone.js"></script>
-        <script src="tones.js"></script>
-        <script src="main.js"></script>
-    </body>
 </html>
